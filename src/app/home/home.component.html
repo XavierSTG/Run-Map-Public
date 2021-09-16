@@ -1,0 +1,29 @@
+<html>
+    <div >
+    <div>
+    <form (ngSubmit)="processForm()" style="text-align: center;">
+        <div class="field" >
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter starting address</mat-label>
+            <input matInput placeholder="Adress" name="adress" [(ngModel)]="address">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        </div>
+        <div class="field">
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter distance (km)</mat-label>
+            <input matInput placeholder="Distance" type="number" name="distance" [(ngModel)]="distance">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        </div>
+        <button mat-raised-button type="submit" class="button is-danger is-large">Submit</button>
+    </form>
+</div>
+<div style="text-align: center;margin-top: 2%;">
+    <iframe [hidden]="isHidden" width="600" height="450" frameborder="0" style="border:0"
+        [src]="this.trustedUrl"
+        allowfullscreen>
+    </iframe>
+</div>
+</div>
+</html>
